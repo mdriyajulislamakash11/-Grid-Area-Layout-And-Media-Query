@@ -1,0 +1,70 @@
+.header, .navbar, .main, .sideber, .advartise, .footer{
+    background-color: bisque;
+    border: 2px solid tomato;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.header{
+    grid-area: header;
+}
+
+.navbar{
+    grid-area: navber;
+}
+
+.main{
+    grid-area: main;
+}
+
+.sideber{
+    grid-area: sideber;
+}
+
+.advartise{
+    grid-area: advartise;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.container{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header   header  header header"
+
+    "navber   main      main    sideber"
+
+    "navber   main     main   advartise" 
+
+    "footer   footer  footer footer"
+    ;
+}
+
+@media screen and (max-width: 576px) {
+    .container{
+        grid-template-areas: 
+        "header"
+        "navber"
+        "main"
+        "sideber"
+        "advartise"
+        "footer"
+        ;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width:002px) {
+    .container{
+        grid-template-areas: 
+        "header header header"
+        "navber main sideber"
+        "navber main advartise"
+        
+        
+        "footer footer footer"
+        ;
+    }
+}
